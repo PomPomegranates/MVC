@@ -34,6 +34,13 @@ namespace NC_MVC
                 return NotFound();
             }
     }
+        [HttpPost]
+
+        public ActionResult<Author> AddAuthor(Author author)
+        {
+            _authorService.AddAuthor(author);
+            return Created(author);
+        }
 
 
     }
